@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>dffcbecf-5b56-457f-9be4-2c11322026ea</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Assign4_Tracy Palm_CIS261.py</StartupFile>
+    <StartupFile>Assignment_4_Tracy_Palm_CIS261.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,9 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assign4_Tracy Palm_CIS261.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="Assignment_4_Tracy_Palm_CIS261.py" />
     <Compile Include="Assignment_4A_Tracy_Palm_CIS261.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

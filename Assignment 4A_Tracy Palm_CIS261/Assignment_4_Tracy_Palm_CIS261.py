@@ -12,16 +12,19 @@ def Login():
         UserDetail = UserDetail.replace("\n", "")
         UserList = UserDetail.split("|")
         if UserName == UserList[0]:
-             UserRole == UserList[2]
-             return UserRole, UserName
+           UserRole = UserList[2]
+           return UserRole, UserName
     return UserRole, UserName
-    
+ 
 
 def get_name():
 
     name = input("Enter employee name: ")
 
     return name
+
+ 
+
 def get_dates_worked():
 
     from_date = input("Enter the start date (mm/dd/yyyy): ")
@@ -29,32 +32,48 @@ def get_dates_worked():
     to_date = input("Enter the last date worked (mm/dd/yyyy): ")
 
     return from_date, to_date
+
+ 
+
 def get_total_hours():
 
     total_hours = float(input("Enter total hours: "))
 
     return total_hours
+
+ 
+
 def get_hourly_rate():
 
     hourly_rate = float(input("Enter hourly rate: "))
 
     return hourly_rate
+
+ 
+
 def get_gross_pay(total_hours, hourly_rate):
 
     gross_pay = float(total_hours) * float(hourly_rate)
 
     return gross_pay
+
+ 
+
 def get_tax_rate():
 
     tax_rate = float(input("Enter tax rate (in %): "))
 
     return tax_rate
 
+   
+
 def calculate_tax(gross_pay, tax_rate):
 
     tax = float(gross_pay) * float(tax_rate / 100)
 
     return tax
+
+ 
 
 def calculate_netpay(gross_pay, tax_rate):
 
@@ -64,6 +83,7 @@ def calculate_netpay(gross_pay, tax_rate):
 
     return net_pay
 
+ 
 
 def PrintEmpInfo(DetailsPrinted):
 
@@ -122,7 +142,6 @@ def PrintEmpInfo(DetailsPrinted):
            if (checkdate < rundate):
 
                continue
-
         to_date = EmpList[1]
 
         name = EmpList[2]
@@ -188,7 +207,6 @@ def PrintTotals(EmpTotals):
     print(f'The total net pay: {EmpTotals["total_net_pay"]:,.2f}')
 
  
-
 if __name__ == "__main__":
 
     UserRole, UserName = Login()

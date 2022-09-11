@@ -1,18 +1,18 @@
 def GetUserName():
-    username = input("Enter the user name: ")
-    return username
+    UserName = input("Enter the user name: ")
+    return UserName
 
 def GetUserPassWord():
-    pwd = input("Enter the password: ")
-    return pwd
+    UserPwd = input("Enter the password: ")
+    return UserPwd
 
 def GetUserRole():
-    userrole = input("Enter role (Admin or User): ")
+    UserRole = input("Enter role (Admin or User): ")
     while True: 
-        if (userrole.upper() == "ADMIN" or userrole.upper() == "USER"):
-            return userrole 
+        if (UserRole.upper() == "ADMIN" or UserRole.upper() == "USER"):
+            return UserRole
         else: 
-            userrole = input("Etner role (Admin or User): ")
+            UserRole = input("Enter role (Admin or User): ")
 
 def printinfo():
 
@@ -23,21 +23,21 @@ def printinfo():
             break
         UserDetail = UserDetail.replace("\n", "")
         UserList = UserDetail.split("|")
-        username = UserList[0]
-        userPassWord = UserList[1]
-        userrole = UserList[2]
-        print("User Name: ", username, "Password: ", userPassWord, "Role: ", userrole)
+        UserName = UserList[0]
+        UserPassWord = UserList[1]
+        UserRole = UserList[2]
+        print("User Name: ", UserName, "Password: ", UserPassWord, "Role: ", UserRole)
 
 if __name__ == "__main__": 
     UserFile = open("Users.txt", "a+")
     while True: 
-        username = GetUserName()
-        if (username.upper() == "END"):
+        UserName = GetUserName()
+        if (UserName.upper() == "END"):
             break
-        userpwd = GetUserPassWord()
-        userrole = GetUserRole()
+        UserPwd = GetUserPassWord()
+        UserRole = GetUserRole()
 
-        UserDetail = username + "|" + userpwd + "|" + userrole + "\n"
+        UserDetail = UserName + "|" + UserPwd + "|" + UserRole + "\n"
         UserFile.write(UserDetail)
 
     UserFile.close()
